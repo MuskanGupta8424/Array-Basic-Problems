@@ -16,6 +16,7 @@ public class Main {
         //   kth Smallest and Largest element in array
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the size of an array ");
+
         int n = sc.nextInt();
 
         int[] arr = new int[n];

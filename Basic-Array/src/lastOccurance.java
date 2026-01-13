@@ -8,6 +8,7 @@ public class lastOccurance {
             if(arr[i]== x){
                 lastIndex =i;
             }
+
         }
         return lastIndex;
     }
