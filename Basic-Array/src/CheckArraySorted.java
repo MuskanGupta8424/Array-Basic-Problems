@@ -23,7 +23,6 @@ public class CheckArraySorted {
         for(int i=0; i<arr.length; i++){
             arr[i] = sc.nextInt();
         }
-g
 
 
         System.out.println("Check the array is sorted : " + checkArraySorted(arr));
