@@ -8,6 +8,7 @@ public class FirstRepeatingNumber {
         for(int i=0; i<n ; i++){
             for(int j=i+1; j<n; j++){
                 if(arr[i] == arr[j]){
+                    System.out.println("i"+ arr[i] + "j" + arr[j]);
                     return arr[i];
                 }
             }
