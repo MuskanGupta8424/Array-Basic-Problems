@@ -1,7 +1,8 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class SortedSquaredArray {
-//sorted non- decreasing order
+//sorted non-decreasing order
     static int[] sortedSquareArray(int[] arr){
 int i= 0; int j= arr.length-1;
 int n= arr.length;
@@ -35,6 +36,24 @@ return ans;
             System.out.print(arr[i] + " ");
         }
     }
+
+
+        static void frequencySort(int[] arr) {
+
+
+            Arrays.sort(arr);
+            int count = 0;
+            for (int i = 0; i < arr.length-1; i++) {
+                if (arr[i] == arr[i + 1]) {
+                    count++;
+                }else{
+                    System.out.println(arr[i] + "----------- " + count);
+                    count =1;
+                }
+            }
+
+        }
+
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter size of an array");
@@ -44,8 +63,11 @@ return ans;
         for(int i=0; i<n; i++){
             arr[i] = sc.nextInt();
         }
-        int[] ans = sortedSquareArray(arr);
-        reverse(ans);
-        printArray(ans);
+//        int[] ans = sortedSquareArray(arr);
+         frequencySort(arr);
+//        reverse(ans);
+//
+//        printArray(ans);
+//
     }
 }
