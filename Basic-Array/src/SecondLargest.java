@@ -28,6 +28,23 @@ public class SecondLargest {
 
         return secondmax;
     }
+
+
+
+    static int secondLargestElement(int[] arr){
+        int largest = arr[0];
+        int slargest = Integer.MIN_VALUE;
+
+        for(int i=0; i<arr.length; i++){
+            if(arr[i] >largest){
+                slargest= largest;
+                largest = arr[i];
+            }else if(arr[i] < largest && arr[i] > slargest){
+                slargest = arr[i];
+            }
+        }
+        return slargest;
+    }
     public static  void main(String[] args){
         Scanner sc= new Scanner(System.in);
         System.out.println("Enter the size of array ");
@@ -39,6 +56,7 @@ public class SecondLargest {
 
         }
 
-        System.out.println( "Find Second Max value" + secondMax(arr));
+//        System.out.println( "Find Second Max value" + secondMax(arr));
+        System.out.println( "Find Second Max value " + secondLargestElement(arr));
     }
 }
